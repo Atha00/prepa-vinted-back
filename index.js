@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/prepa-vinted");
+mongoose.connect(process.env.MONGODB_URI);
 
 const Offer = require("./models/Offer");
 const User = require("./models/User");
